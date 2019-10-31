@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  nats:
+    image: nats-streaming:latest
+    expose:
+      - "4222"
+      - "4223"
+    ports:
+      - "8222:8222"
+      - "8223:8223"
+      - "4223:4223"
+      - "4222:4222"
+    hostname: nats-server
